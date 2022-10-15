@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Class 1 Demo Code</title>
+	</head>
+	<body>
+		<header>
+			<h1>Hello World!</h1>
+		</header>
+		<main>
+			<h2>What kind of pizza toppings do you like?</h2>
+			<p>Here are the available toppings:</p>
+			<ul>
+				<li>Pepperoni</li>
+				<li>Cheese</li>
+				<li>Onions</li>
+				<li>Pineapple</li>
+				<li>Anchovies</li>
+			</ul>
+		</main>
+		<script>
+			let answer1 = prompt('Do you want pepperoni on your pizza?');
+			console.log(answer1);
+
+			let answer2 = prompt('Do you want anchovies?');
+			console.log(answer2);
+
+			// String concatenation
+			alert('You answered ' + answer1 + ' to the pepperoni question');
+
+			if (answer2 === 'yes') {
+				alert('Why do you like anchovies?!?');
+			}
+		</script>
+	</body>
+</html>
