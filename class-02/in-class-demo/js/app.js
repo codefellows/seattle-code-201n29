@@ -36,9 +36,11 @@ if (size === 'large' || size === 'medium') {
 }
 
 
+
+// STRETCH GOALS!
 let order = '';
 
-if (size === 'large' || size === 'medim' || size === 'small') {
+if (size === 'large' || size === 'medium' || size === 'small') {
   order = 'You want a ' + size + ' sized pizza.';
 } else {
   order = 'You want a ??? sized pizza.';
