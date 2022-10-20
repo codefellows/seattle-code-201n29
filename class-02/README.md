@@ -1,5 +1,8 @@
 # Basics of HTML, CSS & JS
 
+## Repl.it
+- String.toLowerCase() & String.toUpperCase(): https://replit.com/@AdamOwada/ElatedBestContent#index.js
+
 ## Overview
 
 This class is focused on practice with JavaScript, an introduction to data types, conditionals, and arrays. We will also be learning about Git and Github at a much deeper level. Today's lab will require the creation of a new repo and using a very basic git workflow.
