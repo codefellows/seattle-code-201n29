@@ -25,13 +25,14 @@ let answer1 = prompt(
   "Hello user! Which of the following are my favorite? (guess one): Pizza, sushi, hotdogs, spinach, onions, mayo"
 );
 
-// if (favoriteFoods.includes(answer1)) {
-//   alert("Correct! I do like " + answer1);
-// } else {
-//   alert("Sorry, wrong");
-// }
+if (favoriteFoods.includes(answer1)) {
+  alert("Correct! I do like " + answer1);
+} else {
+  alert("Sorry, wrong");
+}
 
 // use a for loop to see if an item exists in an array
+
 
 let answer2 = false;
 
