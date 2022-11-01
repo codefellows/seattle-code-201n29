@@ -8,10 +8,14 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
+// sum() takes in two numbers, and returns an array with a number and string inside of it
 function sum(a, b) { //eslint-disable-line
   let twoSum = a + b;
+  // console.log('In sum(), the value of twoSum is: ', twoSum);
   let string = "The sum of " + a + " and " + b + " is " + twoSum + ".";
+  // console.log('In sum(), the value of string is: ', string);
   let result = [twoSum, string];
+  // console.log('In sum(), the value of result is: ', result);
   return result;
 }
 
@@ -51,11 +55,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  // return the sum of a, b, & c
+  let sumOfAandB = sum(a, b)[0]; // 11
+  console.log('the value of sumOfAandB is: ', sumOfAandB, 'the value of c is: ', c);
+  let sumOfABandC = sum(sumOfAandB, c)[0]; // 16
+  console.log("the value of sumOfABandC is: ", sumOfABandC);
+  return sumOfABandC;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -73,12 +82,15 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  let a = sumArr[0];
+  let b = sumArr[1];
+  let c = sumArr[2];
+  console.log(sumAndMultiply(a, b, c));
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
