@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('hello world');
+// console.log('hello world');
 
 // Generate a random number, use this in lab 6!!:
 function randBetween(min, max) {
@@ -18,14 +18,34 @@ function randBetween(min, max) {
 
 
 // example of an Object Literal. Properties and values ae separated by commas, and colons
+// within the object you must use 'this', outside of the object use the object name
 let object1 = {
   name: 'Adam', 
   age: 33,
   hasGlasses: true,
-  pets: ['Brock', 'Yoshi']
+  pets: ['Brock', 'Yoshi'],
+  sayHello: function() {
+    console.log('Hello from object1!!!');
+    console.log(this.name);
+  },
+  getThis: function() {
+    console.log(this); // 'this' refers to the object itself
+  },
+  addPet: function(petName) {
+    this.pets.push(petName);
+    console.log('pets is: ', this.pets);
+  }
 };
 
-// console.log(object1.name);
+console.log('this is:', this);
+
+// object name, followed by . , and method name()
+object1.sayHello(); // invokes object1's .sayHello() method
+
+object1.addPet('Kona');
+object1.addPet('Missy Fishy');
+
+console.log(object1.name);
 // console.log(object1);
 
 // General structure
@@ -90,7 +110,7 @@ for (let i = 0; i < orders.length; i++) {
   revenue += sqaureRugPrice(orderLength, fringe);
 }
 
-console.log('the store\'s revenue is: ', revenue);
+// console.log('the store\'s revenue is: ', revenue);
 
 
 // How to Create an HTML Element With JS
