@@ -1,0 +1,16 @@
+table, th, td {
+    border: .5px solid black;
+}
+
+table {
+    border-spacing: 0px;
+    margin: auto;
+}
+
+th, td {
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+}
