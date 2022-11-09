@@ -1,0 +1,21 @@
+/* Flex items == child elements */
+.box {
+    height: 200px;
+    width: 200px;
+    border: 1px solid blue;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: aqua;
+}
+
+/* Flex container == parent element */
+.row {
+    display: flex; /* this makes the container a flexbox! */
+    flex-direction: row; /* think, which way the arrow is pointing */
+    justify-content: space-evenly; /* think, spacing between flex children */
+    align-items: center; /* think cross axis */
+    flex-wrap: wrap; /* think, wrapping flex items to new lines */
+
+    /* For visibility: */
+    /* border: 1px solid green; */
+}
