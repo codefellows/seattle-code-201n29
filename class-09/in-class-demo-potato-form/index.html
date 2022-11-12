@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Potato Factory</h1>
+
+    
+    <table id="potatoTable">
+        <thead>
+            <th>Variety</th>
+            <th>Color</th>
+            <th>Expiration</th>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
+
+    <!-- Step 1 create a form -->
+    <form id="potatoForm">
+        <fieldset>
+            <legend>The Potato Form</legend>
+            <!-- Step 2 fill it with inputs -->
+            <label>
+                Variety:
+                <input type="text" name="variety" required placeholder="Enter Variety Here"/>
+            </label>
+            <label>
+                Color:
+                <input type="text" name="color" required />
+            </label>
+            <label>
+                Expiration:
+                <input type="number" name="expiration" required min="1" max="5" step=".1" />
+            </label>
+            <button type="submit">Submit Potato</button>
+        </fieldset>
+    </form>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
