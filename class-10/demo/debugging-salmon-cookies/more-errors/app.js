@@ -32,7 +32,7 @@ CookieStand.prototype.randRate = function(){
     this.cookieSoldArray.push(Math.floor(this.aveCookies * (Math.random() * (this.maxCustomers - this.minCustomers + 1) + this.minCustomers)));
   };
   this.cookieSoldTotal = 0;
-  for(i in this.cookieSoldArray){
+  for(let i in this.cookieSoldArray){
     this.cookieSoldTotal += this.cookieSoldArray[i];
   }
   this.cookieSoldArray.push(this.cookieSoldTotal);
@@ -42,7 +42,7 @@ CookieStand.prototype.createHourlyRateTable = function(){
   this.trEl = document.createElement('tr');
   CookieStand.standsTable.appendChild(this.trEl);
   let locCSArray = this.cookieSoldArray.slice(0);
-  // this.cookieSoldArray.unshift(this.name);
+  locCSArray.unshift(this.name);
 
   for(let i = 0; i < locCSArray.length; i++){
     this.tdEl = document.createElement('td');
