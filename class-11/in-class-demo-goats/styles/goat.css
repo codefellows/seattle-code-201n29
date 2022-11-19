@@ -79,30 +79,6 @@ li {
 }
 
 /* -- button -- */
-section + div {
-  background-color: darkgray;
-  color: lightgrey;
-  padding: .5rem 1rem;
-  width: max-content;
-  height: max-content;
-  font-size: .8rem;
-  margin: 1rem;
-
-  /* —— Demo stretch goal —— */
-  /* This code improves the UX. Making it clear what the user should 
-  do once the voting cycle ends. Do not demo this unless you do the 
-  below 'section + div.clicks-allowed' code as well. The class  
-  'clicks-allowed' must be added to the element via the JavaScript. */
-
-  pointer-events: none;
-}
-/* Demo stretch goal: */
-section + div.clicks-allowed {
-  background-color: rosybrown;
-  color: white;
-  cursor: pointer;
-  pointer-events: auto;
-}
-section + div.clicks-allowed:hover {
-  background-color: rgb(211, 187, 175)
+button {
+  height: 3rem;
 }

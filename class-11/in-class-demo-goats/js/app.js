@@ -3,8 +3,10 @@
 // document.querySelector is just like a CSS selector
 let image1 = document.querySelector('section img:first-child');
 let image2 = document.querySelector('section img:nth-child(2)');
+let resultsButton = document.getElementById('results');
 let index1 = 0;
 let index2 = 0;
+let clicks = 0
 
 // we can use a goat constructor
 // clicks
@@ -49,9 +51,11 @@ function renderGoats() {
     image1.src = firstGoat.src;
     image1.alt = firstGoat.name;
     image1.title = firstGoat.name;
+    image1.id = index1;
     image2.src = secondGoat.src;
     image2.alt = secondGoat.name;
     image2.title = secondGoat.name;
+    image2.id = index2;
  
     // increment views
     firstGoat.views++;
@@ -64,29 +68,56 @@ function renderGoats() {
     // increment goat's .clicks
     // render 2 new goats
 function handleGoatClick(event) {
+    clicks++;
     // the event object knows about the event, and the element targeted
     console.log(event.target);
 
     // how do I increment the correct goat's .clicks?
     // One method:
     // 1. iterate over goats array
-    // 2. if goats[i].alt == event.taget.alt, then increment .clicks
+    // 2. if goats[i].name == event.target.alt, then increment .clicks
+    // for (let i = 0; i < goats.length; i++) {
+    //     if (goats[i].name == event.target.alt) {
+    //         goats[i].clicks++;
+    //     }
+    // }
+
     // Another method:
     // use global index variables!
-    if (goats[index1].name === event.target.alt) {
-        goats[index1].clicks++
-    }
-    if (goats[index2].name === event.target.alt) {
-        goats[index2].clicks++
-    }
+    // if (goats[index1].name === event.target.alt) {
+    //     goats[index1].clicks++
+    // }
+    // if (goats[index2].name === event.target.alt) {
+    //     goats[index2].clicks++
+    // }
 
+    // A Final method using .id!:
+    goats[event.target.id].clicks++;
+
+    if (clicks > 9) {
+        // remove the event listeners
+        image1.removeEventListener('click', handleGoatClick);
+        image2.removeEventListener('click', handleGoatClick);
+    }
     console.log(goats);
     renderGoats();
+}
+
+function viewResults(event){
+    let ul = document.querySelector('ul');
+    // make one li for each goat inside goats
+    for (let i = 0; i < goats.length; i++) {
+        let li = document.createElement('li');
+        li.innerText = `${goats[i].name} was viewed ${goats[i].views} times, and was clicked ${goats[i].clicks} times.`;
+        ul.appendChild(li);
+    }
+    resultsButton.removeEventListener('click', viewResults);
 }
 
 
 
 // on page load:
-image1.addEventListener('click', handleGoatClick)
-image2.addEventListener('click', handleGoatClick)
+image1.addEventListener('click', handleGoatClick);
+image2.addEventListener('click', handleGoatClick);
+resultsButton.addEventListener('click', viewResults);
 renderGoats();
