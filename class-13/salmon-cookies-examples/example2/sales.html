@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sales Page</title>
+</head>
+<body>
+    <a href="index.html">Back Home</a>
+    <br>    
+    <table id="salesTable">
+        <thead id="tableHead">
+
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+        <tfoot id="tableFoot">
+
+        </tfoot>
+    </table>
+    <form id="locationForm">
+        <label for="">
+            Name:
+            <input type="text" name="name" required>
+        </label>
+        <label for="">
+            Min:
+            <input type="number" name="min" required>
+        </label>
+        <label for="">
+            Max:
+            <input type="number" name="max" required>
+        </label>
+        <label for="">
+            Avg Sales:
+            <input type="number" name="avg" step="0.1" required>
+        </label>        
+        <input type="submit" value="Submit Location" id="submitButton">
+    </form>
+    <script src="js/app.js"></script>
+</body>
+</html>
